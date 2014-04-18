@@ -1,0 +1,39 @@
+" Enable the mouse
+set mouse=a
+
+" Don't have to SHIFT-:, just ;
+nnoremap ; :
+
+" On long lines, goes to the next line naturally
+nnoremap j gj
+nnoremap k gk
+
+" Clears the search highlight without having to search for something
+" ridiculous first
+nmap <silent> ,/ :nohlsearch<CR>
+
+" Let's you force write a file that should have been opened using sudo in the
+" first place.
+cmap w!! w !sudo tee % >/dev/null
+
+" Allows you to have unwritten buffers while opening other files
+set hidden
+
+" Don't need these
+set nobackup
+set noswapfile
+
+" vim-go
+au Filetype go nnoremap <leader>r :GoRun %<CR>
+
+" vim-airline
+let g:airline_powerline_fonts = 1
+
+" buffergator
+let g:buffergator_viewport_split_policy = 'B'
+" See https://github.com/jeetsukumaran/vim-buffergator/blob/master/doc/buffergator.txt
+
+" buffer navigation
+" :nnoremap <C-S-]> :bnext<CR>
+" :nnoremap <C-S-[> :bprevious<CR>
+
