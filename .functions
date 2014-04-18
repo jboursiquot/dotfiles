@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+function ia() {
+   for FILE in "$@"; do
+      if [ ! -e "$FILE" ]; then
+        touch "$FILE"
+      fi
+   done
+   open -a "iA Writer" "$@"
+}
+
+function marked(){
+  if [ $1 ]
+    then open -a marked.app $1
+  else
+    open -a marked.app
+  fi
+}

@@ -1,0 +1,9 @@
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias v='vim'
+alias v.='vim .'
+alias be='bundle exec'
+
+# RBM
+alias free_slots="bundle exec rake deploy:show | grep -v '\w@rbm' | grep -v '\-\-\-\-\-\-\-\-\-\-\-'"
+alias my_slots="bundle exec rake deploy:show | grep $(git config --get user.email)"
+alias slots="bundle exec rake deploy:show"
